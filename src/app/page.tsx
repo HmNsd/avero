@@ -29,7 +29,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-stone-900 dark:text-white tracking-tight">
-              BnC Auth
+              Avero
             </span>
           </div>
           <nav className="flex gap-1 sm:gap-2 md:gap-4">
@@ -74,7 +74,7 @@ export default function Home() {
             }}
             transition={{ duration: 3, repeat: Infinity }}
           >
-            BnC Auth
+            "Avero"
           </motion.span>
         </h1>
         <motion.p 
@@ -83,8 +83,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          A modern authentication starter built with Next.js, featuring email
-          verification, password reset, and a beautiful UI.
+          “Discover, plan, and book your perfect trip — all in one place.”
         </motion.p>
         <motion.div 
           className="flex flex-row gap-2 mb-8 sm:mb-10 md:mb-16 justify-center px-2"
@@ -95,7 +94,7 @@ export default function Home() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/login"
-              className="bg-stone-200 dark:bg-gray-800 hover:bg-stone-300 dark:hover:bg-gray-700 text-stone-900 dark:text-white font-medium py-2 px-3 rounded-lg shadow-md transition-all duration-300 text-sm border border-stone-300 dark:border-gray-700 hover:scale-105 w-20 text-center"
+              className="bg-stone-200 dark:bg-gray-800 hover:bg-stone-300 dark:hover:bg-gray-700 text-stone-900 dark:text-white font-medium py-2 px-3 rounded-lg shadow-md transition-all duration-300 text-lg border border-stone-300 dark:border-gray-700 hover:scale-105 w-20 text-center"
             >
               Login
             </Link>
@@ -103,7 +102,7 @@ export default function Home() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/signup"
-              className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-3 rounded-lg shadow-md transition-all duration-300 text-sm hover:scale-105 w-20 text-center"
+              className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-3 rounded-lg shadow-md transition-all duration-300 text-lg hover:scale-105 w-20 text-center"
             >
               Signup
             </Link>
@@ -116,10 +115,10 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           {[
-            "Register with your email and password.",
-            "Verify your email address.", 
-            "Login and manage your profile securely.",
-            "Forgot your password? Easily reset it via email."
+            "Smarter trips start here.",
+            "Your travel companion, everywhere.", 
+            "Just pack. We’ll handle the rest.",
+            "Explore more. Stress less."
           ].map((text, index) => (
             <motion.li 
               key={index}
@@ -128,7 +127,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
             >
-              <span className="font-bold text-indigo-600 dark:text-indigo-400 text-base sm:text-lg md:text-xl flex-shrink-0">
+              <span className="font-extralight text-indigo-600 dark:text-indigo-400 text-base sm:text-sm md:text-lg flex-shrink-0">
                 {index + 1}.
               </span>
               <span className="leading-relaxed">{text}</span>
@@ -177,7 +176,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 2.4 }}
           >
-            © {new Date().getFullYear()} Secure Auth Next.js App by Brewncode
+            © {new Date().getFullYear()} All rights reserved.
           </motion.span>
         </div>
       </motion.footer>
