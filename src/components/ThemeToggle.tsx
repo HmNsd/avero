@@ -25,10 +25,11 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 z-50 bg-transparent text-gray-800 dark:text-gray-200 px-4 py-2 text-xl rounded-2xl shadow transition-colors"
+      className="fixed top-3 right-3 sm:top-4 sm:right-4 z-50 bg-stone-200/80 dark:bg-gray-800/80 backdrop-blur-sm text-stone-800 dark:text-gray-200 px-2 py-1.5 sm:px-3 sm:py-2 text-sm sm:text-base rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-stone-300/50 dark:border-gray-700/50"
       aria-label="Toggle dark mode"
     >
-      {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
+      <span className="hidden xs:inline">{theme === "dark" ? "🌙 Dark" : "☀️ Light"}</span>
+      <span className="xs:hidden">{theme === "dark" ? "🌙" : "☀️"}</span>
     </button>
   );
 }

@@ -52,28 +52,31 @@ export default function LoginPage() {
   }, [user]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 transition-colors duration-300 px-4">
-      <div className="w-full max-w-md bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-          Login
+    <div className="min-h-screen bg-stone-50 dark:bg-black flex items-center justify-center transition-colors duration-300 px-4 md:px-6 lg:px-8 py-8 md:py-12">
+      <div className="w-full max-w-lg bg-stone-100/80 dark:bg-gray-900/80 backdrop-blur-md p-6 md:p-8 lg:p-10 rounded-2xl shadow-2xl border border-stone-300/50 dark:border-gray-800/50">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-900 dark:text-white mb-6 md:mb-8 text-center leading-tight">
+          Welcome Back
         </h2>
+        <p className="text-sm md:text-base text-stone-600 dark:text-gray-300 text-center mb-6 md:mb-8 leading-relaxed">
+          Sign in to your account to continue
+        </p>
 
-        <form onSubmit={onLogin} className="space-y-4">
+        <form onSubmit={onLogin} className="space-y-4 md:space-y-6">
           {/* Email */}
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium dark:text-gray-300"
+              className="block text-sm md:text-base font-semibold text-stone-700 dark:text-gray-300 mb-2"
             >
-              Email
+              Email Address
             </label>
             <input
               id="email"
               type="email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
-              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Email"
+              className="w-full px-4 md:px-5 py-3 md:py-4 bg-white dark:bg-gray-800 text-stone-900 dark:text-white border border-stone-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 text-sm md:text-base"
+              placeholder="Enter your email"
             />
           </div>
 
@@ -81,7 +84,7 @@ export default function LoginPage() {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium dark:text-gray-300"
+              className="block text-sm md:text-base font-semibold text-stone-700 dark:text-gray-300 mb-2"
             >
               Password
             </label>
@@ -90,8 +93,8 @@ export default function LoginPage() {
               type="password"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
-              className="mt-1 w-full px-4 py-2 dak:bg-gray-700 dak:text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Password"
+              className="w-full px-4 md:px-5 py-3 md:py-4 bg-white dark:bg-gray-800 text-stone-900 dark:text-white border border-stone-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 text-sm md:text-base"
+              placeholder="Enter your password"
             />
           </div>
 
@@ -104,31 +107,31 @@ export default function LoginPage() {
           {/* Submit Button */}
           <button
             type="submit"
-            className={`w-full py-2 rounded-md transition-colors duration-200
-    ${buttonDisabled
-              ? "bg-gray-500 cursor-not-allowed"
-              : "bg-indigo-600 hover:bg-indigo-700 text-white"}
-  `}
+            className={`w-full py-3 md:py-4 px-6 rounded-xl font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 ${
+              buttonDisabled
+                ? "bg-gray-400 cursor-not-allowed text-gray-600"
+                : "bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg hover:shadow-xl"
+            }`}
             disabled={buttonDisabled}
           >
-            Login
+            Sign In
           </button>
         </form>
 
-        {/* Redirect Link */}
-        <div className="flex flex-col sm:flex-row justify-between items-center mt-4 gap-2">
-          <p className="text-gray-700 dark:text-gray-300">
+        {/* Redirect Links */}
+        <div className="flex flex-col sm:flex-row justify-between items-center mt-6 md:mt-8 gap-3 md:gap-4">
+          <p className="text-sm md:text-base text-stone-700 dark:text-gray-300 text-center sm:text-left">
             Don't have an account?{" "}
             <Link
               href="/signup"
-              className="text-indigo-600 dark:text-indigo-400 hover:underline"
+              className="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold transition-colors"
             >
               Sign Up
             </Link>
           </p>
           <Link
             href="/forgotpassword"
-            className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+            className="text-sm md:text-base text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors"
           >
             Forgot password?
           </Link>
