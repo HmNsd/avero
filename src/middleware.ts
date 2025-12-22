@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const isPublicPath =
-    ["/login", "/signup", "/"].includes(path) || path.includes("/verifyemail");
+    ["/login", "/signup", "/", "/forgotpassword"].includes(path) || path.includes("/verifyemail");
   const token = request.cookies.get("token")?.value || "";
 
   // If user is authenticated and tries to access public pages, redirect to profile
