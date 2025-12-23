@@ -72,7 +72,7 @@ export default function ProfilePage() {
                 href="/ai_chat"
                 className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 md:py-4 px-6 md:px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center inline-block"
               >
-                AI Chat Support
+                AI Chatbot
               </Link>
               
               <button

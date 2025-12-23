@@ -1,5 +1,3 @@
-# Avero
-
 # 🌍 Avero
 
 **Avero** is a modern travel planning and booking app designed for a global audience.  
